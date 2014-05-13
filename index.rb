@@ -1,14 +1,19 @@
 require 'sinatra'
 
+set :views, 'views'
+
 get '/' do
-	"Hello world!"
+	@content = "Hello world!"
+	erb :index
 end
 
 get '/about' do
-	"Hello about!"
+	@content = "Hello about!"
+	erb :about
 end
 
 get '/blog' do
-	"Hello blog!"
+	@content = "Hello blog!"
+	erb :blog
 end
 
